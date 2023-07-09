@@ -1,4 +1,16 @@
 
+let orderItems = [];
+let totalPrice = 0;
+
+function formatRupiah(angka) {
+  const formatter = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
+  return formatter.format(angka);
+}
+
+
 function order(itemName, price, btnId) {
     const button = document.getElementById(btnId);
     
@@ -7,15 +19,12 @@ function order(itemName, price, btnId) {
       button.classList.add("btn-terpesan");
       button.innerHTML = "Terpesan";
       
-      orderItems.push(itemName);
-      totalPrice += price;
-      updateOrderList();
-      updateTotalPrice();
+      orderItems.push(itemName + " - " + formatRupiah(price));
+        totalPrice += price;
+        updateOrderList();
+        updateTotalPrice();
     }
   }
-
-      let orderItems = [];
-      let totalPrice = 0;
   
       function order(itemName, price) {
         orderItems.push(itemName);
@@ -30,15 +39,17 @@ function order(itemName, price, btnId) {
         orderItems.forEach(item => {
           const li = document.createElement("li");
           li.appendChild(document.createTextNode(item));
+          
           orderList.appendChild(li);
         });
       }
   
       function updateTotalPrice() {
         const totalPriceElement = document.getElementById("total-price");
-        totalPriceElement.innerHTML = "Total Harga: Rp" + totalPrice;
+        totalPriceElement.innerHTML = "Total Harga: Rp " +  totalPrice ;
       }
   
+
       function submitOrder() {
         if (orderItems.length === 0) {
           alert("Silakan pilih minuman terlebih dahulu.");
@@ -48,12 +59,11 @@ function order(itemName, price, btnId) {
         }
       }
 
-
       function resetOrder() {
-    orderItems = [];
-    totalPrice = 0;
-    updateOrderList();
-    updateTotalPrice();
+        orderItems = [];
+         totalPrice = 0;
+         updateOrderList();
+         updateTotalPrice();
     
     // Reset tombol pesan
     const buttons = document.getElementsByClassName("btn-terpesan");

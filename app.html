@@ -26,7 +26,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Caramel Macchiato</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                  <button class="btn btn-primary btn-pesan" onclick="order('ACaramel Macchiato', 10)">Pilih Minuman</button>
+                  <button id="btn-minuman-a" class="btn btn-primary btn-pesan" onclick="order('caramel Macchiato : Rp50.000', 50000)">Pilih Minuman</button>
                 </div>
               </div>
               </div>
@@ -37,7 +37,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Resbaryy milky</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                  <button class="btn btn-primary btn-pesan" id="btn-minuman-a" onclick="order('Minuman A', 10)">Pilih Minuman</button>
+                  <button class="btn btn-primary btn-pesan" id="btn-minuman-a" onclick="order('Resbaryy milky', 65000)">Pilih Minuman</button>
                 </div>
               </div>
               </div>
@@ -46,9 +46,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="img/drink4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">leo frapucino</h5>
+                  <h5 class="card-title">Leo frapucino</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                  <button class="btn btn-primary btn-pesan" onclick="order('Minuman A', 10)">Pilih Minuman</button>
+                  <button class="btn btn-primary btn-pesan" onclick="order('Leo frapucino', 10000)">Pilih Minuman</button>
                 </div>
               </div>
               </div>
@@ -59,7 +59,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Caramel Macchiato</h5>
                       <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                      <button class="btn btn-primary btn-pesan" onclick="order('Minuman A', 10)">Pilih Minuman</button>
+                      <button class="btn btn-primary btn-pesan" onclick="order('Manggo esxpreso', 40000)">Pilih Minuman</button>
                     </div>
                   </div>
                   </div>
@@ -69,9 +69,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="img/drink1.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Caramel Macchiato</h5>
+                          <h5 class="card-title">vanila sweett cream</h5>
                           <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                          <button class="btn btn-primary btn-pesan" onclick="order('Minuman A', 10)">Pilih Minuman</button>
+                          <button class="btn btn-primary btn-pesan" onclick="order('vanila swett cream', 70000)">Pilih Minuman</button>
                         </div>
                       </div>
                       </div>
@@ -81,9 +81,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/drink1.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Caramel Macchiato</h5>
+                              <h5 class="card-title">Strawberry funnel cake</h5>
                               <p class="card-text">Lorem ipsum dolor sit amet.</p>
-                              <button class="btn btn-primary btn-pesan" onclick="order('Minuman A', 10)">Pilih Minuman</button>
+                              <button class="btn btn-primary btn-pesan" onclick="order('Strawberry funnel cake', 20000)">Pilih Minuman</button>
                             </div>
                           </div>
                           </div>
@@ -91,7 +91,8 @@
 
 
         </div>
-            <div class="order mt-4 text-center" id="order">
+
+        <div class="order mt-4 text-center" id="order">
             <h2>Daftar Pesanan</h2>
             <ul id="order-list"></ul>
             <p id="total-price"></p>
