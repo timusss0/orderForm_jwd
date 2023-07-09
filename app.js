@@ -2,24 +2,24 @@
 let orderItems = [];
 let totalPrice = 0;
 
-function formatRupiah(angka) {
-  const formatter = new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-  });
-  return formatter.format(angka);
-}
+// function formatRupiah(angka) {
+//   const formatter = new Intl.NumberFormat("id-ID", {
+//     style: "currency",
+//     currency: "IDR",
+//   });
+//   return formatter.format(angka);
+// }
 
 
 function order(itemName, price, btnId) {
     const button = document.getElementById(btnId);
     
     if (button.classList.contains("btn-pesan")) {
-      button.classList.remove("btn-pesan");
-      button.classList.add("btn-terpesan");
-      button.innerHTML = "Terpesan";
-      
-      orderItems.push(itemName + " - " + formatRupiah(price));
+        button.classList.remove("btn-pesan");
+        button.classList.add("btn-terpesan");
+        button.innerHTML = "Terpesan";
+        
+        orderItems.push(itemName);
         totalPrice += price;
         updateOrderList();
         updateTotalPrice();
